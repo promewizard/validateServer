@@ -10,7 +10,7 @@ app.use(cors());
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
-app.post("/crypto", (req, res) => {
+app.post("/crash", (req, res) => {
   const { mod } = req.body;
   console.log("Received mod value:", mod);
   res.send("Mod value received");
