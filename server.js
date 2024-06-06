@@ -12,8 +12,9 @@ app.use(bodyParser.json());
 
 app.post("/crash", (req, res) => {
   const { mod } = req.body;
-  console.log("Received mod value:", mod);
-  res.send("Mod value received");
+  const { ip, hostname } = req;
+  console.log(`1Received mod value from ${ip}:${hostname} :`, mod);
+  res.send("Mod value is validated");
 });
 
 app.listen(port, () => {
