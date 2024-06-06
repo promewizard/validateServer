@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.post("/crash", (req, res) => {
   const { mod } = req.body;
   const { ip } = req;
-  console.log(`1Received mod value from ${ip}:${hostname} :`, mod);
+  console.log(`1Received mod value from ${ip} :`, mod);
   res.send("Mod value is validated");
 });
 
